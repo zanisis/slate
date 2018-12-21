@@ -201,7 +201,7 @@
       <script src="javascripts/all.js"></script>
   </head>
 
-  <body class="index" data-languages="[&quot;shell&quot;,&quot;ruby&quot;,&quot;python&quot;,&quot;javascript&quot;]">
+  <body class="index" data-languages="[&quot;Response&quot;]">
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -211,10 +211,7 @@
     <div class="toc-wrapper">
       <img src="images/logo.png" class="logo" alt="Logo" />
         <div class="lang-selector">
-              <a href="#" data-language-name="shell">shell</a>
-              <a href="#" data-language-name="ruby">ruby</a>
-              <a href="#" data-language-name="python">python</a>
-              <a href="#" data-language-name="javascript">javascript</a>
+              <a href="#" data-language-name="Response">Response</a>
         </div>
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
@@ -223,21 +220,111 @@
       <ul id="toc" class="toc-list-h1">
           <li>
             <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#base-endpoint" class="toc-h2 toc-link" data-title="Base Endpoint">Base Endpoint</a>
+                  </li>
+              </ul>
           </li>
           <li>
             <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
-          </li>
-          <li>
-            <a href="#kittens" class="toc-h1 toc-link" data-title="Kittens">Kittens</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#get-all-kittens" class="toc-h2 toc-link" data-title="Get All Kittens">Get All Kittens</a>
+                    <a href="#get-tokenstring" class="toc-h2 toc-link" data-title="Get Tokenstring">Get Tokenstring</a>
                   </li>
                   <li>
-                    <a href="#get-a-specific-kitten" class="toc-h2 toc-link" data-title="Get a Specific Kitten">Get a Specific Kitten</a>
+                    <a href="#refresh-token" class="toc-h2 toc-link" data-title="Refresh Token">Refresh Token</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#user" class="toc-h1 toc-link" data-title="User">User</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-user" class="toc-h2 toc-link" data-title="Get User">Get User</a>
                   </li>
                   <li>
-                    <a href="#delete-a-specific-kitten" class="toc-h2 toc-link" data-title="Delete a Specific Kitten">Delete a Specific Kitten</a>
+                    <a href="#create-user" class="toc-h2 toc-link" data-title="Create User">Create User</a>
+                  </li>
+                  <li>
+                    <a href="#update-user" class="toc-h2 toc-link" data-title="Update User">Update User</a>
+                  </li>
+                  <li>
+                    <a href="#forgot-password-user" class="toc-h2 toc-link" data-title="Forgot Password User">Forgot Password User</a>
+                  </li>
+                  <li>
+                    <a href="#reset-password-user" class="toc-h2 toc-link" data-title="Reset Password User">Reset Password User</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#company" class="toc-h1 toc-link" data-title="Company">Company</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-company" class="toc-h2 toc-link" data-title="Get Company">Get Company</a>
+                  </li>
+                  <li>
+                    <a href="#create-company" class="toc-h2 toc-link" data-title="Create Company">Create Company</a>
+                  </li>
+                  <li>
+                    <a href="#update-company" class="toc-h2 toc-link" data-title="Update Company">Update Company</a>
+                  </li>
+                  <li>
+                    <a href="#delete-parameters" class="toc-h2 toc-link" data-title="Delete Parameters">Delete Parameters</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#type" class="toc-h1 toc-link" data-title="Type">Type</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-type" class="toc-h2 toc-link" data-title="Get Type">Get Type</a>
+                  </li>
+                  <li>
+                    <a href="#create-type" class="toc-h2 toc-link" data-title="Create Type">Create Type</a>
+                  </li>
+                  <li>
+                    <a href="#update-type" class="toc-h2 toc-link" data-title="Update Type">Update Type</a>
+                  </li>
+                  <li>
+                    <a href="#delete-type" class="toc-h2 toc-link" data-title="Delete Type">Delete Type</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#topic" class="toc-h1 toc-link" data-title="Topic">Topic</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-topic" class="toc-h2 toc-link" data-title="Get Topic">Get Topic</a>
+                  </li>
+                  <li>
+                    <a href="#create-topic" class="toc-h2 toc-link" data-title="Create Topic">Create Topic</a>
+                  </li>
+                  <li>
+                    <a href="#update-topic" class="toc-h2 toc-link" data-title="Update Topic">Update Topic</a>
+                  </li>
+                  <li>
+                    <a href="#delete-topic" class="toc-h2 toc-link" data-title="Delete Topic">Delete Topic</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#document" class="toc-h1 toc-link" data-title="Document">Document</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-document" class="toc-h2 toc-link" data-title="Get Document">Get Document</a>
+                  </li>
+                  <li>
+                    <a href="#download-document" class="toc-h2 toc-link" data-title="Download Document">Download Document</a>
+                  </li>
+                  <li>
+                    <a href="#upload-document" class="toc-h2 toc-link" data-title="Upload Document">Upload Document</a>
+                  </li>
+                  <li>
+                    <a href="#update-document" class="toc-h2 toc-link" data-title="Update Document">Update Document</a>
+                  </li>
+                  <li>
+                    <a href="#delete-document" class="toc-h2 toc-link" data-title="Delete Document">Delete Document</a>
                   </li>
               </ul>
           </li>
@@ -246,198 +333,1226 @@
           </li>
       </ul>
         <ul class="toc-footer">
-            <li><a href='#'>Sign Up for a Developer Key</a></li>
-            <li><a href='https://github.com/lord/slate'>Documentation Powered by Slate</a></li>
+            <li><a href='#'>Documentation Emas-Doc</a></li>
+            <li><a href='https://github.com/lord/slate'>Powered by Slate</a></li>
         </ul>
     </div>
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
         <h1 id='introduction'>Introduction</h1>
-<p>Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.</p>
-
-<p>We have language bindings in Shell, Ruby, Python, and JavaScript! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
-
-<p>This example API documentation page was created with <a href="https://github.com/lord/slate">Slate</a>. Feel free to edit it and use it as a base for your own API&#39;s documentation.</p>
+<p>Welcome to the E-mas Document API! You can use our API to access E-mas</p>
+<h3 id='base-endpoint'>Base Endpoint</h3>
+<p><code>https://e-document-api-dev.e-mas.com</code></p>
 <h1 id='authentication'>Authentication</h1>
-<blockquote>
-<p>To authorize, use this code:</p>
-</blockquote>
-<pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
+<aside class="notice">
+Some APIs need authenticated in<code>Header Parameters</code>
+</aside>
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
-curl <span class="s2">"api_endpoint_here"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-</code></pre>
-<blockquote>
-<p>Make sure to replace <code>meowmeowmeow</code> with your API key.</p>
-</blockquote>
-
-<p>Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our <a href="http://example.com/developers">developer portal</a>.</p>
-
-<p>Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
-
-<p><code>Authorization: meowmeowmeow</code></p>
+<table><thead>
+<tr>
+<th>Key</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Tokenstring</td>
+<td>xxxx</td>
+<td>Get token from Login API.</td>
+</tr>
+</tbody></table>
 
 <aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
+List <code>Roles</code> for access e-mas DOC APIs
 </aside>
-<h1 id='kittens'>Kittens</h1><h2 id='get-all-kittens'>Get All Kittens</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">kittens</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="nx">get</span><span class="p">();</span>
-</code></pre>
+<table><thead>
+<tr>
+<th>ID</th>
+<th>Key</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>1</td>
+<td>Super Admin</td>
+<td>All Access API.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Admin</td>
+<td>Not Allowed API: Update &amp; Delete User, Delete Type, Delete Topic, Delete Document.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Viewer</td>
+<td>Not Allowed API: Update - Delete - Create User, Delete - Create - Update Type, Delete - Create - Update Topic, Delete - Upload - Update Document.</td>
+</tr>
+</tbody></table>
+<h2 id='get-tokenstring'>Get Tokenstring</h2>
 <blockquote>
-<p>The above command returns JSON structured like this:</p>
+<p>Response JSON structured like this:</p>
 </blockquote>
-<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fluffums"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"calico"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXNzd29yZCI6ImZjZTVkMjljYTY2NWI2OTNiZWY3YjU3NGRlMzZkY2NjNjI0MjQxZjMxNTAxODJkODVlODkzMGMxZWM5Y2MyN2RiMGIyMWU4YWVjZjRmMTE2YmQ1ZDZkOWNlOGM5NGMyODZjYzU1YjM2MWI2NzczZGMwMGY2MDBkNjk5M2I2NDhkYTg2YjRkZjFlYmEwN2M1NlxuIiwidGltZSI6IjVjYWE4M2YyMGE4MzhmNGU3ZTQ0MzBiNmFhOTk2Y2I1Y2M1NjRlMzFjZDU4Yzc2NDFlZTZlMWIxMjY0ZmE1ZGRcbiIsInVzZXJuYW1lIjoiNDhkY2FlMDQ0OTA3MzY0MWEzN2QyNjAwMTFkMWFiMjA2YWRiNDU0OTRiOWI2YzNhMTI0Y2YxYjNjZWFmYzZhNjYyNTE1ODRhNDkyOTVlMWZcbiJ9.ZiBbtiYvhykCr7qmLD4eINGzRECHq6O82QnzpPNc7EQ"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"expired"</span><span class="p">:</span><span class="w"> </span><span class="mi">1800</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"roles"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Super Admin"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"allowed_menu"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="s2">"dashboard"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"user"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"companies"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"topics"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"types"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"documents"</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="s2">"allowed_action"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="s2">"/v1/user/getall"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"/v1/user/login"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"/v1/user/create"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"/v1/user/update"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"/v1/company/create"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"/v1/company/update"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"/v1/company/getall"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"/v1/company/delete"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"/v1/type/getall"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"/v1/type/create"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"/v1/type/update"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"/v1/type/delete"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"/v1/topic/getall"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"/v1/topic/create"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"/v1/topic/update"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"/v1/topic/delete"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"/v1/document/upload"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"/v1/document/getall"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"/v1/document/download"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"/v1/document/update"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"/v1/document/delete"</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"first_page"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"last_page"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"next_page"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-12-19T15:26:27.816408084+07:00"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request'>HTTP Request</h3>
+<p><code>POST {{base-endpoint}}/v1/user/login</code></p>
+<h3 id='post-parameters'>POST Parameters</h3>
+<table><thead>
+<tr>
+<th>Key</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>username</td>
+<td>true</td>
+<td>Your email has been registered.</td>
+</tr>
+<tr>
+<td>password</td>
+<td>true</td>
+<td>Your password has been registered.</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">
+Your token will expired in 30 minutes later.
+</aside>
+<h2 id='refresh-token'>Refresh Token</h2>
+<blockquote>
+<p>Response JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXNzd29yZCI6IjEyOWEzODI2MjEyZjY0NDUyZmQ4NGJhNzdjZTMxNzQ2ZDA2NDVhYWFlZWQ1NjU4ZjM3MjQzYTAwNDQ1YzI0NzVjNjg3MWMwYjRkOTZmMTUxZTFiYzNlNWRlMDYwOGE5YjcyY2M5ODRlZjc5NzY3OWFiYjFmMmMwMDY1YjQwOTliY2E1OTIyNDAzMWE0YzRjMVxuIiwidGltZSI6IjRlNDA0NzFlZjAyOTljY2M5YTQ1MjBhM2E3ODRmYzQ4YzU5ZmU1ZDIxYjhkZDI4NThhMDZiMDAxZDBlNDdmODRcbiIsInVzZXJuYW1lIjoiNDVmYmViY2Y2NWY3ZWQwODY4ZWI2NGU0NDUxNDY0ZGM1ZDYyMGNkODdmMThiZDMzNjM3MmRiZjA2ZDg0NGI4ZmU1Zjc0ZmU0ZTgxNDdjZGFcbiJ9.5F-oM32umgpFpiZpKYqLmCCsREmO3hWjbsD1w1CRxZY"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"expired"</span><span class="p">:</span><span class="w"> </span><span class="mi">1800</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"roles"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Super Admin"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"allowed_menu"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="s2">"dashboard"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"user"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"companies"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"topics"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"types"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"documents"</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="s2">"allowed_action"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="s2">"/v1/user/getall"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"/v1/user/login"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"/v1/user/create"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"/v1/user/update"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"/v1/company/create"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"/v1/company/update"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"/v1/company/getall"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"/v1/company/delete"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"/v1/type/getall"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"/v1/type/create"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"/v1/type/update"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"/v1/type/delete"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"/v1/topic/getall"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"/v1/topic/create"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"/v1/topic/update"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"/v1/topic/delete"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"/v1/document/upload"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"/v1/document/getall"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"/v1/document/download"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"/v1/document/update"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"/v1/document/delete"</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"first_page"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"last_page"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"next_page"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-12-20T10:38:50.385697878+07:00"</span><span class="w">
+</span><span class="p">}</span><span class="w">
 </span></code></pre>
-<p>This endpoint retrieves all kittens.</p>
-<h3 id='http-request'>HTTP Request</h3>
-<p><code>GET http://example.com/api/kittens</code></p>
+<p>use this API for get new token before your token first created expired</p>
+<h3 id='http-request-2'>HTTP request</h3>
+<p><code>POST {{base-endpoint}}/v1/user/login</code></p>
+
+<aside class="notice">
+Need authenticated <code>Header Parameters</code>
+</aside>
+<h1 id='user'>User</h1><h2 id='get-user'>Get User</h2>
+<blockquote>
+<p>Response JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"array"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">22</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"group_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mala@gmail.com"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"is_active"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"created_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-12-14T13:46:35+07:00"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"created_by"</span><span class="p">:</span><span class="w"> </span><span class="s2">"example@mail.com"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"updated_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0001-01-01T00:00:00Z"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"updated_by"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">21</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"group_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"malafauzana@gmail.com"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"is_active"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"created_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-12-11T14:12:52+07:00"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"created_by"</span><span class="p">:</span><span class="w"> </span><span class="s2">"example@mail.com"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"updated_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-12-14T16:34:07+07:00"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"updated_by"</span><span class="p">:</span><span class="w"> </span><span class="s2">"example@mail.com"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"first_page"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://e-document-api-dev.e-mas.com/v1/user/getall?per_page=5&amp;page=1"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"last_page"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://e-document-api-dev.e-mas.com/v1/user/getall?per_page=5&amp;page=4"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"next_page"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://e-document-api-dev.e-mas.com/v1/user/getall?per_page=5&amp;page=2"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-12-20T10:43:33.977595736+07:00"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-3'>HTTP Request</h3>
+<p><code>GET {{base-endpoint}}/v1/user/getall</code></p>
 <h3 id='query-parameters'>Query Parameters</h3>
 <table><thead>
 <tr>
-<th>Parameter</th>
-<th>Default</th>
+<th>Key</th>
+<th>Required</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>include_cats</td>
+<td>per_page</td>
 <td>false</td>
-<td>If set to true, the result will also include cats.</td>
-</tr>
-<tr>
-<td>available</td>
-<td>true</td>
-<td>If set to false, the result will include kittens that have already been adopted.</td>
+<td>how many data want to show.</td>
 </tr>
 </tbody></table>
 
-<aside class="success">
-Remember — a happy kitten is an authenticated kitten!
+<aside class="notice">
+Need authenticated <code>Header Parameters</code>
 </aside>
-<h2 id='get-a-specific-kitten'>Get a Specific Kitten</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-</code></pre>
+<h2 id='create-user'>Create User</h2>
 <blockquote>
-<p>The above command returns JSON structured like this:</p>
+<p>Response JSON structured like this:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
+    </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="mi">201</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">23</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"group_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"adzannyjjj@mail.com"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"is_active"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"first_page"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"last_page"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"next_page"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-12-20T10:44:52.431225557+07:00"</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This endpoint retrieves a specific kitten.</p>
-
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
-<h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET http://example.com/kittens/&lt;ID&gt;</code></p>
-<h3 id='url-parameters'>URL Parameters</h3>
+</span></code></pre><h3 id='http-request-4'>HTTP Request</h3>
+<p><code>POST {{base-endpoint}}/v1/user/create</code></p>
+<h3 id='post-parameters-2'>POST Parameters</h3>
 <table><thead>
 <tr>
-<th>Parameter</th>
+<th>Key</th>
+<th>Required</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>ID</td>
-<td>The ID of the kitten to retrieve</td>
+<td>username</td>
+<td>true</td>
+<td>Your email want to register.</td>
+</tr>
+<tr>
+<td>password</td>
+<td>true</td>
+<td>Your password want to register.</td>
+</tr>
+<tr>
+<td>group_id</td>
+<td>true</td>
+<td>to give privilege access ref: List Roles.</td>
 </tr>
 </tbody></table>
-<h2 id='delete-a-specific-kitten'>Delete a Specific Kitten</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
-  -X DELETE
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-</code></pre>
+<aside class="notice">
+Need authenticated <code>Header Parameters</code>
+</aside>
+<h2 id='update-user'>Update User</h2>
 <blockquote>
-<p>The above command returns JSON structured like this:</p>
+<p>Response JSON structured like this:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">":("</span><span class="w">
+    </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"group_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"is_active"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="s2">"adzannyjjj@mail.com"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"first_page"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"last_page"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"next_page"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-12-20T11:00:47.670313102+07:00"</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This endpoint deletes a specific kitten.</p>
-<h3 id='http-request-3'>HTTP Request</h3>
-<p><code>DELETE http://example.com/kittens/&lt;ID&gt;</code></p>
-<h3 id='url-parameters-2'>URL Parameters</h3>
+</span></code></pre><h3 id='http-request-5'>HTTP Request</h3>
+<p><code>PUT {{base-endpoint}}/v1/user/update</code></p>
+<h3 id='put-parameters'>PUT Parameters</h3>
 <table><thead>
 <tr>
-<th>Parameter</th>
+<th>Key</th>
+<th>Required</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>ID</td>
-<td>The ID of the kitten to delete</td>
+<td>username</td>
+<td>false</td>
+<td>Your email want to register.</td>
+</tr>
+<tr>
+<td>password</td>
+<td>false</td>
+<td>Your password want to register.</td>
+</tr>
+<tr>
+<td>group_id</td>
+<td>false</td>
+<td>to give privilege access ref: List Roles.</td>
+</tr>
+<tr>
+<td>is_active</td>
+<td>true</td>
+<td>to give email user can be login or not.</td>
+</tr>
+</tbody></table>
+<h3 id='list-key-is_active'>List Key Is_Active</h3>
+<table><thead>
+<tr>
+<th>ID</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>0</td>
+<td>E-mail in active.</td>
+</tr>
+<tr>
+<td>1</td>
+<td>E-mail active.</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">
+Need authenticated <code>Header Parameters</code>
+</aside>
+<h2 id='forgot-password-user'>Forgot Password User</h2>
+<blockquote>
+<p>Response JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"example@mail.com"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Permintaan Reset Password anada sudah dikirim melalui email dengan alamat example@mail.com"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"first_page"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"last_page"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"next_page"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-12-20T11:07:56.509893254+07:00"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-6'>HTTP Request</h3>
+<p><code>PUT {{base-endpoint}}/v1/user/forgot-password</code></p>
+<h3 id='put-parameters-2'>PUT Parameters</h3>
+<table><thead>
+<tr>
+<th>Key</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>email</td>
+<td>true</td>
+<td>Your email want to Request Forgot Password.</td>
+</tr>
+</tbody></table>
+<h2 id='reset-password-user'>Reset Password User</h2>
+<blockquote>
+<p>Response JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"example@mail.com"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Password berhasil diperbaharui"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"first_page"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"last_page"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"next_page"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-12-20T11:36:09.099276989+07:00"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-7'>HTTP Request</h3>
+<p><code>PUT {{base-endpoint}}/v1/user/forgot-password</code></p>
+<h3 id='put-parameters-3'>PUT Parameters</h3>
+<table><thead>
+<tr>
+<th>Key</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>password</td>
+<td>true</td>
+<td>Set New Password.</td>
+</tr>
+<tr>
+<td>password_confirm</td>
+<td>true</td>
+<td>Set Confirm Password same like Field above (New Password).</td>
+</tr>
+</tbody></table>
+<h3 id='header-parameters'>Header Parameters</h3>
+<table><thead>
+<tr>
+<th>Key</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Tokenreset</td>
+<td>true</td>
+<td>Got token from your mail.</td>
+</tr>
+</tbody></table>
+<h1 id='company'>Company</h1><h2 id='get-company'>Get Company</h2>
+<blockquote>
+<p>Response JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"array"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">18</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"perusahaan baru"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"new new new "</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"created_by"</span><span class="p">:</span><span class="w"> </span><span class="s2">"malafauzana94@gmail.com"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"updated_by"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"created_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-12-12T11:19:15+07:00"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"updated_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0001-01-01T00:00:00Z"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">17</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7company"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7description company"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"created_by"</span><span class="p">:</span><span class="w"> </span><span class="s2">"example@mail.com"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"updated_by"</span><span class="p">:</span><span class="w"> </span><span class="s2">"example@mail.com"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"created_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-12-11T11:04:03+07:00"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"updated_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-12-11T11:04:31+07:00"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"first_page"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://e-document-api-dev.e-mas.com/v1/company/getall?per_page=20&amp;page=1"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"last_page"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://e-document-api-dev.e-mas.com/v1/company/getall?per_page=20&amp;page=1"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"next_page"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-12-20T14:07:27.61204852+07:00"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-8'>HTTP Request</h3>
+<p><code>GET {{base-endpoint}}/v1/company/getall</code></p>
+
+<aside class="notice">
+Need authenticated <code>Header Parameters</code>
+</aside>
+<h2 id='create-company'>Create Company</h2>
+<blockquote>
+<p>Response JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="mi">201</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">19</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PT. Aurora Karya Indonesia"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Boleh dilihat pegang jangan"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"created_by"</span><span class="p">:</span><span class="w"> </span><span class="s2">"example@mail.com"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"updated_by"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"created_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-12-20T14:16:54.798791686+07:00"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"updated_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0001-01-01T00:00:00Z"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"first_page"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"last_page"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"next_page"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-12-20T14:16:54.847414648+07:00"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-9'>HTTP Request</h3>
+<p><code>POST {{base-endpoint}}/v1/company/create</code></p>
+<h3 id='post-parameters-3'>POST Parameters</h3>
+<table><thead>
+<tr>
+<th>Key</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>name</td>
+<td>true</td>
+<td>Name of Company.</td>
+</tr>
+<tr>
+<td>description</td>
+<td>true</td>
+<td>Company description detail.</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">
+Need authenticated <code>Header Parameters</code>
+</aside>
+<h2 id='update-company'>Update Company</h2>
+<blockquote>
+<p>Response JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">19</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PT. Aurora Karya Indonesia"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Boleh dilihat pegang jangan oke"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"created_by"</span><span class="p">:</span><span class="w"> </span><span class="s2">"example@mail.com"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"updated_by"</span><span class="p">:</span><span class="w"> </span><span class="s2">"example@mail.com"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"created_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-12-20T14:16:54+07:00"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"updated_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-12-20T14:25:19.716476731+07:00"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"first_page"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"last_page"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"next_page"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-12-20T14:25:19.721164321+07:00"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-10'>HTTP Request</h3>
+<p><code>PUT {{base-endpoint}}/v1/company/update</code></p>
+<h3 id='put-parameters-4'>PUT Parameters</h3>
+<table><thead>
+<tr>
+<th>Key</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>true</td>
+<td>Identity Document of company has registered.</td>
+</tr>
+<tr>
+<td>name</td>
+<td>true</td>
+<td>Name of Company.</td>
+</tr>
+<tr>
+<td>description</td>
+<td>true</td>
+<td>Company description detail.</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">
+Need authenticated <code>Header Parameters</code>
+</aside>
+<h2 id='delete-parameters'>Delete Parameters</h2>
+<blockquote>
+<p>Response JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
+    </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"first_page"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"last_page"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"next_page"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-12-20T14:38:28.91110367+07:00"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-11'>HTTP Request</h3>
+<p><code>DELETE {{base-endpoint}}/v1/company/delete</code></p>
+<h3 id='query-parameters-2'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Key</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>true</td>
+<td>Identity Document of company has registered.</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">
+Need authenticated <code>Header Parameters</code>
+</aside>
+<h1 id='type'>Type</h1><h2 id='get-type'>Get Type</h2>
+<blockquote>
+<p>Response JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"array"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">37</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"create new type"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"description new type"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"created_by"</span><span class="p">:</span><span class="w"> </span><span class="s2">"example@mail.com"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"updated_by"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"created_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-12-14T13:44:09+07:00"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"updated_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0001-01-01T00:00:00Z"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">36</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"type lama deh"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"deskripsi type lama deh "</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"created_by"</span><span class="p">:</span><span class="w"> </span><span class="s2">"example@mail.com"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"updated_by"</span><span class="p">:</span><span class="w"> </span><span class="s2">"example@mail.com"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"created_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-12-13T10:46:35+07:00"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"updated_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-12-13T10:46:58+07:00"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">32</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"first_page"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://e-document-api-dev.e-mas.com/v1/type/getall?per_page=20&amp;page=1"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"last_page"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://e-document-api-dev.e-mas.com/v1/type/getall?per_page=20&amp;page=2"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"next_page"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://e-document-api-dev.e-mas.com/v1/type/getall?per_page=20&amp;page=2"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-12-20T15:06:36.547179918+07:00"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-12'>HTTP Request</h3>
+<p><code>GET {{base-endpoint}}/v1/type/getall</code></p>
+
+<aside class="notice">
+Need authenticated <code>Header Parameters</code>
+</aside>
+<h2 id='create-type'>Create Type</h2>
+<blockquote>
+<p>Response JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="mi">201</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">38</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PHH"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Perjanjian HA HA"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"created_by"</span><span class="p">:</span><span class="w"> </span><span class="s2">"example@email.com"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"updated_by"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"created_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-12-20T15:08:10.443480372+07:00"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"updated_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0001-01-01T00:00:00Z"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"first_page"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"last_page"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"next_page"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-12-20T15:08:10.447715035+07:00"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-13'>HTTP Request</h3>
+<p><code>POST {{base-endpoint}}/v1/type/create</code></p>
+<h3 id='post-parameters-4'>POST Parameters</h3>
+<table><thead>
+<tr>
+<th>Key</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>name</td>
+<td>true</td>
+<td>Name of type.</td>
+</tr>
+<tr>
+<td>description</td>
+<td>true</td>
+<td>Detail from of type.</td>
+</tr>
+</tbody></table>
+<h2 id='update-type'>Update Type</h2>
+<blockquote>
+<p>Response JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">38</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PHH"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Perjanjian HA HA"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"created_by"</span><span class="p">:</span><span class="w"> </span><span class="s2">"example@mail.com"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"updated_by"</span><span class="p">:</span><span class="w"> </span><span class="s2">"example@mail.com"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"created_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-12-20T15:08:10+07:00"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"updated_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-12-20T15:13:25.074509172+07:00"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"first_page"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"last_page"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"next_page"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-12-20T15:13:25.076703701+07:00"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-14'>HTTP Request</h3>
+<p><code>PUT {{base-endpoint}}/v1/type/update</code></p>
+<h3 id='put-parameters-5'>PUT Parameters</h3>
+<table><thead>
+<tr>
+<th>Key</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>true</td>
+<td>Identity Document of type has registered.</td>
+</tr>
+<tr>
+<td>name</td>
+<td>true</td>
+<td>Name of type.</td>
+</tr>
+<tr>
+<td>description</td>
+<td>true</td>
+<td>Detail from of type.</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">
+Need authenticated <code>Header Parameters</code>
+</aside>
+<h2 id='delete-type'>Delete Type</h2>
+<blockquote>
+<p>Response JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
+    </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"first_page"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"last_page"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"next_page"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-12-20T14:38:28.91110367+07:00"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-15'>HTTP Request</h3>
+<p><code>DELETE {{base-endpoint}}/vi/type/delete</code></p>
+<h3 id='query-parameters-3'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Key</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>true</td>
+<td>Identity Document of type has registered.</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">
+Need authenticated <code>Header Parameters</code>
+</aside>
+<h1 id='topic'>Topic</h1><h2 id='get-topic'>Get Topic</h2>
+<blockquote>
+<p>Response JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"array"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"id_company"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"company_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PT. Orori Indonesia"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Popular Mainsion"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Kerjasama majalah popular"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"created_by"</span><span class="p">:</span><span class="w"> </span><span class="s2">"example@mail.com"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"updated_by"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"created_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-11-21T17:35:05+07:00"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"updated_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0001-01-01T00:00:00Z"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="s2">"example@mail.com"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"indra.octama@gmail.com"</span><span class="w">
+            </span><span class="p">]</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"id_company"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"company_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PT. Orori Indonesia"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PKL"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PKL"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"created_by"</span><span class="p">:</span><span class="w"> </span><span class="s2">"example@mail.com"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"updated_by"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"created_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-11-22T14:36:32+07:00"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"updated_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0001-01-01T00:00:00Z"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="s2">"example@mail.com"</span><span class="w">
+            </span><span class="p">]</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">24</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"first_page"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://e-document-api-dev.e-mas.com/v1/topic/getall?per_page=20&amp;page=1"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"last_page"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://e-document-api-dev.e-mas.com/v1/topic/getall?per_page=20&amp;page=2"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"next_page"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://e-document-api-dev.e-mas.com/v1/topic/getall?per_page=20&amp;page=2"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-12-20T15:30:05.04077053+07:00"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-16'>HTTP Request</h3>
+<p><code>GET {{base-endpoint}}/v1/topic/getall</code></p>
+
+<aside class="notice">
+Need authenticated <code>Header Parameters</code>
+</aside>
+<h2 id='create-topic'>Create Topic</h2>
+<blockquote>
+<p>Response JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="mi">201</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">37</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"id_company"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fiesta 3"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Kerjasama majalah Fiesta 2"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"example@mail.com"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"example@mail.com"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="s2">"created_by"</span><span class="p">:</span><span class="w"> </span><span class="s2">"example@mail.com"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"created_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-12-20T16:21:25.42426995+07:00"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"first_page"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"last_page"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"next_page"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-12-20T16:21:25.428827296+07:00"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-17'>HTTP Request</h3>
+<p><code>POST {{base-endpoint}}/v1/topic/create</code></p>
+<h3 id='post-parameters-5'>POST Parameters</h3>
+<table><thead>
+<tr>
+<th>Key</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id_company</td>
+<td>true</td>
+<td>Identity Document of company has registered.</td>
+</tr>
+<tr>
+<td>name</td>
+<td>true</td>
+<td>Name of topic.</td>
+</tr>
+<tr>
+<td>description</td>
+<td>true</td>
+<td>Detail from of topic.</td>
+</tr>
+<tr>
+<td>email</td>
+<td>true</td>
+<td>who want user want to get notif.</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">
+Post parameters <code>email</code>
+ex: [{"email":"example@mail.com"},{"email":"example@mail.com"}]
+</aside>
+
+<aside class="notice">
+Need authenticated <code>Header Parameters</code>
+</aside>
+<h2 id='update-topic'>Update Topic</h2>
+<blockquote>
+<p>Response JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">27</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"id_company"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Popular Banget"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Popular banget"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"omyank2007i@gmail.com"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"indra.octama@orori.com"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="s2">"updated_by"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"updated_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-12-20T16:25:05.838944313+07:00"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"first_page"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"last_page"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"next_page"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-12-20T16:25:05.842980497+07:00"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-18'>HTTP Request</h3>
+<p><code>PUT {{base-endpoint}}/v1/topic/update</code></p>
+<h3 id='put-parameters-6'>PUT Parameters</h3>
+<table><thead>
+<tr>
+<th>Key</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>true</td>
+<td>Identity Document of topic has registered.</td>
+</tr>
+<tr>
+<td>id_company</td>
+<td>true</td>
+<td>Identity Document of company has registered.</td>
+</tr>
+<tr>
+<td>name</td>
+<td>true</td>
+<td>Name of topic.</td>
+</tr>
+<tr>
+<td>description</td>
+<td>true</td>
+<td>Detail from of topic.</td>
+</tr>
+<tr>
+<td>email</td>
+<td>true</td>
+<td>who want user want to get notif.</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">
+Need authenticated <code>Header Parameters</code>
+</aside>
+<h2 id='delete-topic'>Delete Topic</h2>
+<blockquote>
+<p>Response JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
+    </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"first_page"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"last_page"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"next_page"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-12-20T16:25:45.730765161+07:00"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-19'>HTTP Request</h3>
+<p><code>DELETE {{base-endpoint}}/v1/topic/delete</code></p>
+<h3 id='query-parameters-4'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Key</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>true</td>
+<td>Identity Document of type has registered.</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">
+Need authenticated <code>Header Parameters</code>
+</aside>
+<h1 id='document'>Document</h1><h2 id='get-document'>Get Document</h2>
+<blockquote>
+<p>Response JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"array"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">71</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"light-bulb-3104355_1280.jpg"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"file_path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"downloads/2018.jpg"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"id_type"</span><span class="p">:</span><span class="w"> </span><span class="mi">31</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"id_topic"</span><span class="p">:</span><span class="w"> </span><span class="mi">29</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"topic"</span><span class="p">:</span><span class="w"> </span><span class="s2">"transfer keluar"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"company"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PT e-mas"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"is_expired"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"end_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-12-19T00:00:00+07:00"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"created_by"</span><span class="p">:</span><span class="w"> </span><span class="s2">"exapmle@mail.com"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"updated_by"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SYSTEM AUTO UPDATE EMAIL END DATE"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"created_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-12-12T11:17:41+07:00"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"updated_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-12-12T11:30:00+07:00"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">38</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"first_page"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://e-document-api-dev.e-mas.com/v1/document/getall?per_page=1&amp;page=1"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"last_page"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://e-document-api-dev.e-mas.com/v1/document/getall?per_page=1&amp;page=38"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"next_page"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://e-document-api-dev.e-mas.com/v1/document/getall?per_page=1&amp;page=2"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-12-20T16:50:36.18958342+07:00"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-20'>HTTP Request</h3>
+<p><code>GET {{base-endpoint}}/v1/document/getall</code></p>
+<h3 id='query-parameters-5'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Key</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>per_page</td>
+<td>false</td>
+<td>how many data want to show.</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">
+Need authenticated <code>Header Parameters</code>
+</aside>
+<h2 id='download-document'>Download Document</h2><h3 id='http-request-21'>HTTP Request</h3>
+<p><code>GET {{base-endpoint}}/v1/document/download</code></p>
+<h3 id='query-parameters-6'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Key</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>true</td>
+<td>Identity Document of document has uploaded.</td>
+</tr>
+</tbody></table>
+<h2 id='upload-document'>Upload Document</h2>
+<blockquote>
+<p>Response JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="mi">201</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">72</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"id_type"</span><span class="p">:</span><span class="w"> </span><span class="mi">34</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"id_topic"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5.-Object.pdf"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"file_path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"downloads/2018/December/21/2018-December-21-2-39-1-5.-Object.pdf"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"end_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-12-05 00:00:00"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"first_page"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"last_page"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"next_page"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-12-21T09:39:01.358964355+07:00"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-22'>HTTP Request</h3>
+<p><code>POST {{base-endpoint}}/v1/document/upload</code></p>
+<h3 id='post-parameters-6'>POST Parameters</h3>
+<table><thead>
+<tr>
+<th>Key</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id_topic</td>
+<td>true</td>
+<td>Identity Document of company has registered.</td>
+</tr>
+<tr>
+<td>id_type</td>
+<td>true</td>
+<td>Identity Document of type has registered.</td>
+</tr>
+<tr>
+<td>end_date</td>
+<td>true</td>
+<td>Date file is expired.</td>
+</tr>
+<tr>
+<td>file</td>
+<td>true</td>
+<td>File want to upload max size less than 100mb.</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">
+Need authenticated <code>Header Parameters</code>
+</aside>
+<h2 id='update-document'>Update Document</h2>
+<blockquote>
+<p>Response JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">72</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"id_type"</span><span class="p">:</span><span class="w"> </span><span class="mi">34</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"id_topic"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6.-Object.pdf"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"file_path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"downloads/2018/December/21/2018-December-21-2-50-29-6.-Object.pdf"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"end_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-12-19 00:00:00"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"first_page"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"last_page"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"next_page"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-12-21T09:50:29.89619903+07:00"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-23'>HTTP Request</h3>
+<p><code>PUT {{base-endpoint}}/v1/document/update</code></p>
+<h3 id='put-parameters-7'>PUT Parameters</h3>
+<table><thead>
+<tr>
+<th>Key</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>true</td>
+<td>Identity Document of document has uploaded.</td>
+</tr>
+<tr>
+<td>id_topic</td>
+<td>true</td>
+<td>Identity Document of company has registered.</td>
+</tr>
+<tr>
+<td>id_type</td>
+<td>true</td>
+<td>Identity Document of type has registered.</td>
+</tr>
+<tr>
+<td>end_date</td>
+<td>true</td>
+<td>Date file is expired.</td>
+</tr>
+<tr>
+<td>file</td>
+<td>true</td>
+<td>File want to upload max size less than 100mb.</td>
+</tr>
+</tbody></table>
+<h2 id='delete-document'>Delete Document</h2>
+<blockquote>
+<p>Response JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"object"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
+    </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"first_page"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"last_page"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"next_page"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-12-21T09:52:11.727053577+07:00"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-24'>HTTP Request</h3>
+<p><code>DELETE {{base-endpoint}}/v1/document/delete</code></p>
+<h3 id='query-parameters-7'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Key</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>true</td>
+<td>Identity Document of document has uploaded.</td>
 </tr>
 </tbody></table>
 <h1 id='errors'>Errors</h1>
-<aside class="notice">
-This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.
-</aside>
-
-<p>The Kittn API uses the following error codes:</p>
+<p>The E-mas Document API uses the following error codes:</p>
 
 <table><thead>
 <tr>
@@ -459,11 +1574,11 @@ This error section is stored in a separate file in <code>includes/_errors.md</co
 </tr>
 <tr>
 <td>404</td>
-<td>Not Found -- The specified kitten could not be found.</td>
+<td>Not Found -- The specified your looking could not be found.</td>
 </tr>
 <tr>
 <td>405</td>
-<td>Method Not Allowed -- You tried to access a kitten with an invalid method.</td>
+<td>Method Not Allowed -- You tried to access a document with an invalid method.</td>
 </tr>
 <tr>
 <td>406</td>
@@ -471,7 +1586,7 @@ This error section is stored in a separate file in <code>includes/_errors.md</co
 </tr>
 <tr>
 <td>410</td>
-<td>Gone -- The kitten requested has been removed from our servers.</td>
+<td>Gone -- The document requested has been removed from our servers.</td>
 </tr>
 <tr>
 <td>418</td>
@@ -479,7 +1594,7 @@ This error section is stored in a separate file in <code>includes/_errors.md</co
 </tr>
 <tr>
 <td>429</td>
-<td>Too Many Requests -- You&#39;re requesting too many kittens! Slow down!</td>
+<td>Too Many Requests -- You&#39;re requesting too many documents! Slow down!</td>
 </tr>
 <tr>
 <td>500</td>
@@ -494,10 +1609,7 @@ This error section is stored in a separate file in <code>includes/_errors.md</co
       </div>
       <div class="dark-box">
           <div class="lang-selector">
-                <a href="#" data-language-name="shell">shell</a>
-                <a href="#" data-language-name="ruby">ruby</a>
-                <a href="#" data-language-name="python">python</a>
-                <a href="#" data-language-name="javascript">javascript</a>
+                <a href="#" data-language-name="Response">Response</a>
           </div>
       </div>
     </div>
